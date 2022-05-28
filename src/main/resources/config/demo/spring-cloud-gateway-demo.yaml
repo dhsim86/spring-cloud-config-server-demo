@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: spring-webflux-demo
+          uri: http://localhost:30080/host-info
+          predicates:
+            - "Path=/webflux-demo/**"
